@@ -22,7 +22,7 @@ namespace FileBackupper.Entities
             return Directory.Exists(OriginPath);
         }
 
-        public void CreatFolder()
+        public void CreateFolder()
         {
             Directory.CreateDirectory(OriginPath);
         }
@@ -61,7 +61,7 @@ namespace FileBackupper.Entities
             }
 
             if (!targetFolder.IsFolderExists())
-                targetFolder.CreatFolder();
+                targetFolder.CreateFolder();
 
             CloneInnerFiles(targetFolder);
             CloneInnerFolders(targetFolder);
