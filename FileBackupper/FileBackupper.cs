@@ -18,6 +18,7 @@ namespace FileBackupper
             FolderEntity origin = new FolderEntity(_configData.OriginPath);
             FolderEntity target = new FolderEntity(_configData.TargetPath);
 
+            target.PutStamp();
             origin.CloneInnerToFolder(target);
         }
     }

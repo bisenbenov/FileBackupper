@@ -66,5 +66,11 @@ namespace FileBackupper.Entities
             CloneInnerFiles(targetFolder);
             CloneInnerFolders(targetFolder);
         }
+
+        public void PutStamp()
+        {
+            FolderEntity stamp = new FolderEntity(Path.Combine(OriginPath, "Backup_stamp_" + DateTime.Now.ToString("hh-mm-ss_dd/MM/yy")));
+            stamp.CreateFolder();
+        }
     }
 }
